@@ -104,6 +104,33 @@
 	<build>
 		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
 		<finalName>mrf</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<additionalClasspathElements>
+						<additionalClasspathElement>
+							${project.basedir}/src/main/webapp/WEB-INF/lib/platform-extension-framework.jar
+						</additionalClasspathElement>
+					</additionalClasspathElements>
+					<mainClass>za.co.fnb.connect.image.creator.ImageCreator</mainClass>
+					<executable>java</executable>
+					<arguments>
+						<argument>./rawImages</argument>
+						<argument>./src/main/resources/images</argument>
+						<argument>phone</argument>
+					</arguments>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 	<artifactId>BaseMavenProject</artifactId>
 </project>
