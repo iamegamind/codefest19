@@ -1,0 +1,10 @@
+<?xml version='1.0' standalone='yes'?>
+<ui-component>
+
+	<clearcontroller class="za.co.fnb.ocep.controllers.ClearController" />
+
+	<!--********************************************* 
+						VIEWS
+	    *********************************************-->
+			
+</ui-component>
