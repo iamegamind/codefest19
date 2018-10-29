@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
 
-import za.co.fnb.pe.framework.api.UIView;
 import za.co.fnb.pe.framework.api.UIViewContext;
 import za.co.fnb.pe.framework.template.elements.ControlType;
 import za.co.fnb.pe.framework.template.elements.FormControl;
@@ -14,7 +13,7 @@ import za.co.fnb.pe.framework.template.elements.Radio;
 import za.co.fnb.pe.framework.template.phone.MarketingViewTemplate;
 import za.co.fnb.pe.framework.utils.UIMessageConfig;
 
-public class MarketingView implements UIView {
+public class MarketingView extends BaseUIView {
 
 	@Override
 	public void processMessage(UIViewContext context) {
@@ -97,7 +96,7 @@ public class MarketingView implements UIView {
 	}
 
 	protected String formatLabel(String html, UIViewContext context) {
-		return (html);
+		return html;
 	}
 
 	/**
@@ -149,6 +148,6 @@ public class MarketingView implements UIView {
 	@Override
 	public void postProcessMessage(UIViewContext context) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

@@ -1,13 +1,12 @@
 package za.co.fnb.ocep.views;
 
 import za.co.fnb.ocep.cache.SessionContext;
-import za.co.fnb.pe.framework.api.UIView;
 import za.co.fnb.pe.framework.api.UIViewContext;
 import za.co.fnb.pe.framework.template.phone.OCEPCameraViewTemplate;
 import za.co.fnb.pe.framework.template.phone.OCEPFilePickerViewTemplate;
 import za.co.fnb.pe.framework.template.phone.OCEPGalleryViewTemplate;
 
-public class MediaView implements UIView {
+public class MediaView extends BaseUIView {
 
 	@Override
 	public void processMessage(UIViewContext context) {

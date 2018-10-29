@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
 
-import za.co.fnb.pe.framework.api.UIView;
 import za.co.fnb.pe.framework.api.UIViewContext;
 import za.co.fnb.pe.framework.template.elements.ControlType;
 import za.co.fnb.pe.framework.template.elements.FormControl;
@@ -13,8 +12,8 @@ import za.co.fnb.pe.framework.template.elements.Radio;
 import za.co.fnb.pe.framework.template.phone.InstantServicesViewTemplate;
 import za.co.fnb.pe.framework.utils.UIMessageConfig;
 
-public class ISView implements UIView {
-	
+public class ISView extends BaseUIView {
+
 	@Override
 	public void processMessage(UIViewContext context) {
 		InstantServicesViewTemplate view = (InstantServicesViewTemplate) context.getUI();
@@ -30,7 +29,7 @@ public class ISView implements UIView {
 					});
 				}
 			}
-			
+
 			if (control.getType().equals(ControlType.HTML_CAROUSEL)) {
 				if (control.getPageHtmlList() != null) {
 					control.getPageHtmlList().stream().forEach(pageHtml -> {
@@ -40,7 +39,7 @@ public class ISView implements UIView {
 					});
 				}
 			}
-			
+
 			if (control.getType().equals(ControlType.RADIO_GROUP)) {
 				if (control.getRadioList() != null) {
 					for (Radio entry : control.getRadioList()) {
@@ -48,11 +47,11 @@ public class ISView implements UIView {
 					}
 				}
 			}
-			
+
 			if (control.getType().equals(ControlType.BUTTON_CAROUSEL)) {
 				control.getPageButtonList().stream().forEach(pageButton -> pageButton.setParent(control.getKey()));
 			}
-			
+
 			if (control.getType().equals(ControlType.LABEL)) {
 				if (!control.getLabel().equals("")) {
 					control.setLabel(UIMessageConfig.getLabel(context.getRequest().getChannel().getSkin(), context.getRequest().getDevice().getPlatform().toString(), control.getLabel()));
@@ -102,11 +101,11 @@ public class ISView implements UIView {
 	}
 
 	protected String formatLabel(String html, UIViewContext context) {
-		return (html);
+		return html;
 	}
 
 	protected String formatInstruction(String instruction, UIViewContext context) {
-		return (UIMessageConfig.getInstruction(context.getRequest().getChannel().getSkin(), context.getRequest().getDevice().getPlatform().toString(), instruction));
+		return UIMessageConfig.getInstruction(context.getRequest().getChannel().getSkin(), context.getRequest().getDevice().getPlatform().toString(), instruction);
 	}
 
 	/**
@@ -130,26 +129,29 @@ public class ISView implements UIView {
 			controls.remove(control);
 		}
 	}
-	
-	 /**
-     * This method gets a first control from the FormContols for a ISView with a specific key
-     * @param controls - List of controls
-     * @param key - The key of the control to retrieve from the list
-     */
-    public static FormControl getControl(List<FormControl> controls, String key){
 
-        for ( FormControl control : controls ){
-            if(control.getKey().equalsIgnoreCase(key)){
-                return control;
-            }
-        }
+	/**
+	 * This method gets a first control from the FormContols for a ISView with a specific key
+	 * 
+	 * @param controls
+	 *            - List of controls
+	 * @param key
+	 *            - The key of the control to retrieve from the list
+	 */
+	public static FormControl getControl(List<FormControl> controls, String key) {
 
-        return null;
-    }
+		for (FormControl control : controls) {
+			if (control.getKey().equalsIgnoreCase(key)) {
+				return control;
+			}
+		}
+
+		return null;
+	}
 
 	@Override
 	public void postProcessMessage(UIViewContext context) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }
