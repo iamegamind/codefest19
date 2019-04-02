@@ -28,7 +28,7 @@
 			<artifactId>framework</artifactId>
 			<scope>system</scope>
 			<version>1.0</version>
-			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/platform-extension-framework.jar</systemPath>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/platform-extension-framework-v27.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.apache</groupId>

@@ -19,6 +19,6 @@
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/tempus-fugit-1.1.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/hamcrest-core-1.2.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/proxool-0.9.0RC3.jar"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/platform-extension-framework-v25.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/platform-extension-framework-v27.jar"/>
 	<classpathentry kind="output" path="src/main/webapp/WEB-INF/classes"/>
 </classpath>
