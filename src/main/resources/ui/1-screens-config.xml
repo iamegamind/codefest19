@@ -1,10 +1,36 @@
 <?xml version='1.0' standalone='yes'?>
-<ui-component>
+<ui-component
+        ui-extension-prefix="ui.ereceipt."
+        model-extension-prefix="model.ereceipt.">
 
-	<clearcontroller class="za.co.fnb.ocep.controllers.ClearController" />
+    <clearcontroller class="za.co.fnb.ocep.controllers.ClearController"/>
 
-	<!--********************************************* 
-						VIEWS
-	    *********************************************-->
-			
+
+    <!--*********************************************
+                        VIEWS
+        *********************************************-->
+
+
+    <!--**************************** WELCOME SCREEN ********************************-->
+
+    <ui id="ui.ereceipts.logon.linkingwelcome"
+        template="ocep.phone.linking.welcome"
+        persistance="NONE"
+        tabson="false">
+
+        <!--  Navigation Section -->
+        <title text="Linking Welcome View Template"/>
+        <image_full iconid="resource.ocep.landing.page"/>
+
+        <leftbutton type="NAVIGATE"
+                    text="Back"
+                    uiid="ui.start"
+                    parent="me"/>
+
+        <!--        <moreinfoaction uiid="ui.digital.more.info.action.view"-->
+        <!--                        parent="me"/>-->
+        <instruction text="plain.label"/>
+    </ui>
+
+
 </ui-component>

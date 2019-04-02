@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui-framework 
-	ui-extension-prefix="ui.ocep."
-	model-extension-prefix="model.ocep." >
+<ui-framework
+        ui-extension-prefix="ui.ereceipts."
+        model-extension-prefix="model.ereceipts.">
 
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./ui/1-screens-config.xml"/>
-	
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+                href="./ui/1-screens-config.xml"/>
+
 </ui-framework>
