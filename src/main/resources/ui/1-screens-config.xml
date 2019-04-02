@@ -1,7 +1,5 @@
 <?xml version='1.0' standalone='yes'?>
-<ui-component
-        ui-extension-prefix="ui.ereceipt."
-        model-extension-prefix="model.ereceipt.">
+<ui-component>
 
     <clearcontroller class="za.co.fnb.ocep.controllers.ClearController"/>
 
@@ -13,23 +11,27 @@
 
     <!--**************************** WELCOME SCREEN ********************************-->
 
-    <ui id="ui.ereceipts.logon.linkingwelcome"
-        template="ocep.phone.linking.welcome"
+    <ui id="ui.ereceipts.start.view"
+        template="ocep.phone.mm.view"
         persistance="NONE"
         tabson="false">
 
         <!--  Navigation Section -->
-        <title text="Linking Welcome View Template"/>
-        <image_full iconid="resource.ocep.landing.page"/>
-
+        <title text="eReceipts"/>
         <leftbutton type="NAVIGATE"
                     text="Back"
                     uiid="ui.start"
                     parent="me"/>
 
-        <!--        <moreinfoaction uiid="ui.digital.more.info.action.view"-->
-        <!--                        parent="me"/>-->
-        <instruction text="plain.label"/>
+        <rootcontainer>
+            <image iconid="resource.ocep.landing.page"
+                   alignment="CENTER" scaletype="CENTER_CROP" height="fill"/>
+            <stackedcontainer key="stackedcontainer.0">
+                <h1 text="Welcome"/>
+                <h2 key="name" text="to eReceipts"/>
+                <spacer height="40"/>
+            </stackedcontainer>
+        </rootcontainer>
     </ui>
 
 
