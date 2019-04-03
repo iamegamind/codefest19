@@ -107,7 +107,7 @@
     <ui id="ui.ereceipts.receipts.invoices.container"
         template="ocep.phone.mm.view"
         persistance="NONE"
-        class="za.co.fnb.ocep.views.InvoicesView">
+        class="za.co.fnb.ocep.views.ReceiptsView">
 
         <!-- Navigation Section -->
         <title text="Transactions"/>
@@ -119,15 +119,16 @@
 
         <rootcontainer>
 <!--            <image_full iconid="resource.digital.messaging.nomessages.v1"/>-->
-            <structuredcontainer>
+            <structuredcontainer key="structuredcontainer.0">
                 <header>
                     <viewswitcher leftuiid="" lefttext="Receipts"
                                   leftborder="${skins.symbol.colour.primary}"
                                   leftcolour="${skins.symbol.colour.primary}"
                                   lefttextcolour="${skins.symbol.colour.paper}" leftselected="Y"
 
-                                  rightuiid=""
+                                  rightuiid="ui.ereceipts.receipts.invoices.icontainer"
                                   righttext="Invoices"
+                                  
                                   rightborder="${skins.symbol.colour.primary}"
                                   rightcolour="${skins.symbol.colour.paper}"
                                   righttextcolour="${skins.symbol.colour.primary}" rightselected="N"
@@ -135,7 +136,6 @@
                     </viewswitcher>
                 </header>
                 <body>
-k
                 </body>
 <!--                <bottom>-->
 <!--                    <h1 text="Please note" fontcolour="${skins.symbol.colour.highlight}"></h1>-->
@@ -162,5 +162,83 @@ k
         </rootcontainer>
     </ui>
 
+<ui id="ui.ereceipts.receipts.invoices.icontainer"
+        template="ocep.phone.mm.view"
+        persistance="NONE"
+        class="za.co.fnb.ocep.views.ReceiptsView">
+
+        <!-- Navigation Section -->
+        <title text="Transactions"/>
+
+        <leftbutton type="NAVIGATE"
+                    text="BACK"
+                    uiid="ui.start"
+                    parent="me"/>
+
+        <rootcontainer>
+<!--            <image_full iconid="resource.digital.messaging.nomessages.v1"/>-->
+            <structuredcontainer>
+                <header>
+                    <viewswitcher leftuiid="ui.ereceipts.receipts.invoices.container" lefttext="Receipts"
+                                  leftborder="${skins.symbol.colour.primary}"
+                                  leftcolour="${skins.symbol.colour.paper}"
+                                  lefttextcolour="${skins.symbol.colour.primary}" leftselected="Y"
+
+                                  rightuiid=""
+                                  righttext="Invoices"
+                                  
+                                  rightborder="${skins.symbol.colour.primary}"
+                                  rightcolour="${skins.symbol.colour.primary}"
+                                  righttextcolour="${skins.symbol.colour.paper}" rightselected="N"
+                                  entertype="FADE" exittype="FADE">
+                    </viewswitcher>
+                </header>
+                <body>
+                </body>
+<!--                <bottom>-->
+<!--                    <h1 text="Please note" fontcolour="${skins.symbol.colour.highlight}"></h1>-->
+<!--                    <h2 text="Please note" alignment="CENTER"></h2>-->
+<!--                    <h3 text="Please note"></h3>-->
+<!--                    <paragraph height="30" fontcolour="${skins.symbol.colour.secondary}"-->
+<!--                               text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."></paragraph>-->
+<!--                    <subtext text="Please note" fontcolour="${skins.symbol.colour.ghost.medium}"-->
+<!--                             alignment="RIGHT"></subtext>-->
+
+<!--                    <pillbutton type="NAVIGATE" text="Back"-->
+<!--                                uiid="ui.digital.mm.navigation.root.main" colour="${skins.symbol.colour.action}"-->
+<!--                                textcolour="${skins.symbol.colour.paper}" bordercolour="${skins.symbol.colour.ink}"-->
+<!--                                selectedcolour="${skins.symbol.colour.primary}"-->
+<!--                                selectedtextcolour="${skins.symbol.colour.paper}"-->
+<!--                                selectedbordercolour="${skins.symbol.colour.ink}"/>-->
+<!--                </bottom>-->
+<!--                <footer datasource="model.digital.template.mm.changed.symbol"-->
+<!--                        dataparent="ui.digital.mm.navigation.complex.view">-->
+<!--                    <composemessage value="123" entertype="BOTTOM"-->
+<!--                                    exittype="BOTTOM"/>-->
+<!--                </footer>-->
+            </structuredcontainer>
+        </rootcontainer>
+    </ui>
+    
+    
+     <ui id="ui.ereceipts.registration.result.receiptdetail"
+        template="ocep.phone.result"
+        persistance="NONE">
+
+        <!--  Navigation Section -->
+        <title text="Registered Successfully"/>
+        <rightbutton type="NAVIGATE"
+                    text="BACK"
+                    uiid="ui.start"
+                    parent="me"/>
+
+        <!-- Data Section -->
+        <instruction text="YOU HAVE SUCCESSFULLY"/>
+
+        <content text="Registered for eReceipts"
+                 iconid="resource.ocep.results.view.success"/>
+    </ui>
+    
+    
 
 </ui-component>

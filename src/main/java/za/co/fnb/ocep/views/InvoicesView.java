@@ -33,8 +33,8 @@ public class InvoicesView extends MagicMountainView implements UIView {
 			 .withGroupName("eReceipt")
 			 .withDescriptor("Message")
 			 .withTime("Time")
-			 .withNavigateUIID("uiid")
-				// .withLeftSwipe("messaging.delete.v1", SymbolColour.ACTION, "Delete", SymbolColour.PAPER)
+			 .withNavigateUIID("ui.ereceipts.registration.result.receiptdetail")
+						// .withLeftSwipe("messaging.delete.v1", SymbolColour.ACTION, "Delete", SymbolColour.PAPER)
 	         .addToContainer(stackedcontainer);
 			
 			
