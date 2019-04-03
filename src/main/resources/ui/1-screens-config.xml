@@ -106,7 +106,8 @@
 
     <ui id="ui.ereceipts.receipts.invoices.container"
         template="ocep.phone.mm.view"
-        persistance="NONE">
+        persistance="NONE"
+        class="za.co.fnb.ocep.views.InvoicesView">
 
         <!-- Navigation Section -->
         <title text="Transactions"/>
