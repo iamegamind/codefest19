@@ -1,0 +1,19 @@
+<?xml version='1.0' standalone='yes'?>
+<ui-component>
+
+    <controller id="ui.ereceipts.user.ereceipts.enabled.controller"
+                class="za.co.fnb.ocep.controllers.DetermineEReceiptsEnabilityController">
+
+        <mapping mapping="eReceiptsEnabled" destination="ui.ereceipts.receipts.invoices.container"/>
+        <mapping mapping="eReceiptsDisabled" destination="ui.ereceipts.start.view"/>
+    </controller>
+
+
+    <controller id="ui.ereceipts.user.registration.status.controller"
+                class="za.co.fnb.ocep.controllers.EReceiptsRegistrationControl">
+
+        <mapping mapping="registrationSuccess" destination="ui.ereceipts.registration.result.success"/>
+        <mapping mapping="registrationFailure" destination="ui.ereceipts.registration.result.error"/>
+    </controller>
+
+</ui-component>
